@@ -1,0 +1,31 @@
+<svg width="1280" height="720" viewBox="0 0 1280 720" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg2" x1="0" y1="0" x2="0" y2="720" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0D1117"/>
+      <stop offset="1" stop-color="#161B22"/>
+    </linearGradient>
+  </defs>
+  <rect width="1280" height="720" fill="url(#bg2)"/>
+  <rect x="40" y="24" width="1200" height="56" rx="10" fill="#161B22" stroke="#30363D"/>
+  <text x="68" y="58" fill="#E6EDF3" font-size="20" font-family="Inter, Arial">my-project / main</text>
+
+  <rect x="90" y="116" width="1100" height="560" rx="14" fill="#161B22" stroke="#30363D"/>
+  <text x="130" y="166" fill="#E6EDF3" font-size="28" font-family="Inter, Arial" font-weight="700">Quick setup — if you’ve done this kind of thing before</text>
+
+  <rect x="130" y="210" width="1040" height="58" rx="10" fill="#0D1117" stroke="#30363D"/>
+  <text x="156" y="246" fill="#E6EDF3" font-size="18" font-family="Inter, Arial">https://github.com/your-name/my-project.git</text>
+
+  <rect x="1020" y="220" width="130" height="38" rx="8" fill="#21262D" stroke="#30363D"/>
+  <text x="1062" y="245" fill="#E6EDF3" font-size="14" font-family="Inter, Arial">Copy</text>
+
+  <rect x="130" y="308" width="1040" height="320" rx="12" fill="#0D1117" stroke="#30363D"/>
+  <text x="160" y="348" fill="#8B949E" font-size="16" font-family="Inter, Arial">…or push an existing repository from the command line</text>
+
+  <rect x="160" y="378" width="980" height="210" rx="10" fill="#010409" stroke="#30363D"/>
+  <text x="190" y="420" fill="#7EE787" font-size="17" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">git remote add origin https://github.com/your-name/my-project.git</text>
+  <text x="190" y="458" fill="#7EE787" font-size="17" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">git branch -M main</text>
+  <text x="190" y="496" fill="#7EE787" font-size="17" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">git push -u origin main</text>
+
+  <rect x="160" y="536" width="600" height="34" rx="8" fill="#1B2432"/>
+  <text x="178" y="558" fill="#58A6FF" font-size="14" font-family="Inter, Arial" font-weight="700">Copy URL ở trên rồi thay vào lệnh git remote add origin</text>
+</svg>

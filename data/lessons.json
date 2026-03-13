@@ -1,0 +1,245 @@
+{
+    "totalHours": "12-16h",
+    "levels": [
+        {
+            "name": "Foundation",
+            "description": "Hiểu repo, snapshot, commit, branch, và đồng bộ remote."
+        },
+        {
+            "name": "Collaboration",
+            "description": "Làm việc nhóm với pull request, code review và resolve conflict cơ bản."
+        },
+        {
+            "name": "Professional Workflow",
+            "description": "Áp dụng GitHub Flow chuẩn, commit quality và release nhịp nhàng."
+        },
+        {
+            "name": "Troubleshooting",
+            "description": "Khôi phục sai sót, audit lịch sử và xử lý tình huống thực tế an toàn."
+        }
+    ],
+    "lessons": [
+        {
+            "id": "L0",
+            "title": "Bắt đầu từ folder trên máy -> GitHub repo mới",
+            "level": "Foundation",
+            "duration": "40m",
+            "type": "Starter Hands-on",
+            "goal": "Biến một folder local thành Git repository, tạo repo mới trên GitHub và push code lần đầu thành công.",
+            "commands": [
+                "git init",
+                "git add .",
+                "git commit -m \"chore: initial commit\"",
+                "git branch -M main",
+                "git remote add origin <repo-url>",
+                "git push -u origin main"
+            ],
+            "steps": [
+                "B1: Mở terminal tại đúng folder dự án local.",
+                "B2: Chạy git init để khởi tạo repository.",
+                "B3: Chạy git add . rồi git commit -m \"chore: initial commit\".",
+                "B4: Trên GitHub, tạo repository mới (không chọn README/.gitignore để tránh conflict commit đầu).",
+                "B5: Copy URL repository (HTTPS hoặc SSH).",
+                "B6: Chạy git branch -M main.",
+                "B7: Chạy git remote add origin <repo-url>.",
+                "B8: Chạy git push -u origin main để đẩy lần đầu và thiết lập upstream.",
+                "B9: Reload GitHub để xác nhận code đã xuất hiện."
+            ],
+            "quiz": {
+                "question": "Khi tạo repository mới trên GitHub để push từ local lần đầu, nên tránh chọn mục nào để giảm khả năng conflict?",
+                "options": [
+                    "README/.gitignore mẫu trên GitHub",
+                    "Repository name",
+                    "Visibility (public/private)"
+                ],
+                "answer": 0,
+                "explain": "Nếu local đã có commit đầu, tạo thêm commit README từ GitHub có thể làm lịch sử lệch ngay từ đầu."
+            }
+        },
+        {
+            "id": "L1",
+            "title": "Git là gì? Mô hình 3 vùng làm việc",
+            "level": "Foundation",
+            "duration": "30m",
+            "type": "Concept + Demo",
+            "goal": "Phân biệt Working Tree, Staging Area, Repository và hiểu vì sao cần commit nhỏ.",
+            "commands": [
+                "git status",
+                "git add",
+                "git commit"
+            ],
+            "quiz": {
+                "question": "Lệnh nào đưa thay đổi từ working tree vào staging area?",
+                "options": [
+                    "git commit",
+                    "git add",
+                    "git push"
+                ],
+                "answer": 1,
+                "explain": "git add dùng để stage thay đổi trước khi commit."
+            }
+        },
+        {
+            "id": "L2",
+            "title": "Tạo repo và commit đầu tiên",
+            "level": "Foundation",
+            "duration": "35m",
+            "type": "Hands-on",
+            "goal": "Khởi tạo repo mới, theo dõi file, commit với message rõ ràng.",
+            "commands": [
+                "git init",
+                "git add .",
+                "git commit -m \"feat: init\""
+            ],
+            "quiz": {
+                "question": "Sau git init, bước đúng tiếp theo để chuẩn bị commit toàn bộ file là gì?",
+                "options": [
+                    "git push",
+                    "git add .",
+                    "git merge"
+                ],
+                "answer": 1,
+                "explain": "git add . đưa toàn bộ thay đổi hiện tại vào staging area."
+            }
+        },
+        {
+            "id": "L3",
+            "title": "Làm việc với branch",
+            "level": "Foundation",
+            "duration": "45m",
+            "type": "Hands-on",
+            "goal": "Tạo branch tính năng, chuyển nhánh, merge vào nhánh chính.",
+            "commands": [
+                "git switch -c",
+                "git switch",
+                "git merge"
+            ],
+            "quiz": {
+                "question": "Lệnh nào tạo và chuyển ngay sang nhánh mới?",
+                "options": [
+                    "git switch -c feat/x",
+                    "git branch feat/x",
+                    "git checkout main"
+                ],
+                "answer": 0,
+                "explain": "git switch -c <branch> vừa tạo vừa chuyển nhánh trong một lệnh."
+            }
+        },
+        {
+            "id": "L4",
+            "title": "Kết nối GitHub và đồng bộ remote",
+            "level": "Collaboration",
+            "duration": "45m",
+            "type": "Hands-on",
+            "goal": "Push code lên GitHub, kéo thay đổi mới về local đúng cách.",
+            "commands": [
+                "git remote add origin",
+                "git push -u origin main",
+                "git pull --rebase"
+            ],
+            "quiz": {
+                "question": "Tùy chọn -u trong git push -u origin main dùng để làm gì?",
+                "options": [
+                    "Bật chế độ an toàn",
+                    "Thiết lập upstream branch",
+                    "Xóa branch cũ"
+                ],
+                "answer": 1,
+                "explain": "-u lưu tracking để các lần push/pull sau không cần chỉ rõ origin/main."
+            }
+        },
+        {
+            "id": "L5",
+            "title": "GitHub Flow chuẩn cho team",
+            "level": "Collaboration",
+            "duration": "60m",
+            "type": "Scenario",
+            "goal": "Đi trọn vòng đời: tạo nhánh feature, mở PR, review, merge, xóa branch.",
+            "commands": [
+                "git switch -c feat/...",
+                "git push",
+                "git branch -d"
+            ],
+            "quiz": {
+                "question": "Trong GitHub Flow, code nên được merge vào main khi nào?",
+                "options": [
+                    "Ngay khi tạo branch",
+                    "Sau khi PR được review và đạt yêu cầu",
+                    "Khi chưa test để tiết kiệm thời gian"
+                ],
+                "answer": 1,
+                "explain": "Main chỉ nên nhận code đã review và xác nhận ổn định."
+            }
+        },
+        {
+            "id": "L6",
+            "title": "Giải quyết conflict có chiến lược",
+            "level": "Collaboration",
+            "duration": "50m",
+            "type": "Lab",
+            "goal": "Xử lý conflict khi merge/rebase và xác nhận kết quả bằng test/manual check.",
+            "commands": [
+                "git merge",
+                "git rebase",
+                "git add",
+                "git rebase --continue"
+            ],
+            "quiz": {
+                "question": "Sau khi sửa file conflict trong rebase, lệnh đúng để tiếp tục là gì?",
+                "options": [
+                    "git rebase --continue",
+                    "git merge --continue",
+                    "git reset --hard"
+                ],
+                "answer": 0,
+                "explain": "Quy trình chuẩn là sửa conflict -> git add -> git rebase --continue."
+            }
+        },
+        {
+            "id": "L7",
+            "title": "Lịch sử sạch với rebase/cherry-pick",
+            "level": "Professional Workflow",
+            "duration": "60m",
+            "type": "Advanced",
+            "goal": "Biết khi nào dùng rebase/cherry-pick để giữ lịch sử rõ và dễ review.",
+            "commands": [
+                "git rebase -i",
+                "git cherry-pick",
+                "git log --oneline --graph"
+            ],
+            "quiz": {
+                "question": "Khi nào nên dùng cherry-pick?",
+                "options": [
+                    "Muốn lấy chọn lọc một commit sang nhánh khác",
+                    "Muốn xóa toàn bộ lịch sử",
+                    "Muốn đổi remote URL"
+                ],
+                "answer": 0,
+                "explain": "cherry-pick phục vụ tái sử dụng commit cụ thể ở nhánh khác."
+            }
+        },
+        {
+            "id": "L8",
+            "title": "An toàn khi sửa sai",
+            "level": "Troubleshooting",
+            "duration": "55m",
+            "type": "Advanced Lab",
+            "goal": "Rollback thay đổi và phục hồi commit bằng reset/revert/reflog an toàn.",
+            "commands": [
+                "git reset --soft",
+                "git revert",
+                "git reflog"
+            ],
+            "quiz": {
+                "question": "Nếu commit đã push shared branch, cách an toàn hơn để hoàn tác là gì?",
+                "options": [
+                    "git reset --hard",
+                    "git revert",
+                    "xóa repository"
+                ],
+                "answer": 1,
+                "explain": "git revert tạo commit đảo ngược, an toàn hơn reset trên nhánh đã chia sẻ."
+            }
+        }
+    ]
+}

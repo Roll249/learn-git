@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bắt đầu từ local lên GitHub</title>
+    <link rel="stylesheet" href="../assets/styles.css" />
+</head>
+
+<body data-page="starter">
+    <header class="topbar">
+        <a class="brand" href="../index.html">Git Pro Path</a>
+        <nav>
+            <a class="active" href="index.html">Bắt đầu</a>
+            <a href="../lessons/index.html">Lộ trình</a>
+            <a href="../commands/index.html">Câu lệnh</a>
+            <a href="../labs/index.html">Lab</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="hero guide-hero">
+            <h1>Bài 0: Từ folder trên máy lên GitHub</h1>
+            <p>
+                Đây là bài bắt buộc cho người mới. Làm đúng 5 bước dưới đây để biến folder local thành repository trên GitHub.
+            </p>
+        </section>
+
+        <section class="guide-grid">
+            <article class="guide-card">
+                <h3>Bước 1 — Mở đúng folder local</h3>
+                <p>Trong terminal, chuyển tới thư mục dự án bạn muốn quản lý bằng Git.</p>
+                <div class="terminal-shot">
+                    <span class="terminal-dot"></span><span class="terminal-dot"></span><span class="terminal-dot"></span>
+                    <code>cd /path/to/your-project</code>
+                    <code>ls</code>
+                </div>
+            </article>
+
+            <article class="guide-card">
+                <h3>Bước 2 — Khởi tạo Git và commit đầu tiên</h3>
+                <p>Tạo repository local và lưu snapshot đầu tiên.</p>
+                <div class="terminal-shot">
+                    <code>git init</code>
+                    <code>git add .</code>
+                    <code>git commit -m "chore: initial commit"</code>
+                    <code>git branch -M main</code>
+                </div>
+            </article>
+
+            <article class="guide-card">
+                <h3>Bước 3 — Tạo repo mới trên GitHub</h3>
+                <p>Vào GitHub và chọn tạo repo mới. Không tick tạo README/.gitignore tự động.</p>
+                <figure class="shot-frame">
+                    <img src="../assets/images/github-new-repo.svg" alt="Màn hình GitHub Create a new repository" loading="lazy" />
+                    <figcaption>Màn hình tạo repository mới trên GitHub.</figcaption>
+                </figure>
+                <div class="ui-shot">
+                    <div class="ui-head">GitHub · New repository</div>
+                    <ul>
+                        <li>Repository name: <strong>my-project</strong></li>
+                        <li>Visibility: Public hoặc Private</li>
+                        <li>Không chọn: Add a README / .gitignore / license</li>
+                    </ul>
+                </div>
+            </article>
+
+            <article class="guide-card">
+                <h3>Bước 4 — Kết nối local với remote</h3>
+                <p>Copy URL repository vừa tạo và gắn vào local.</p>
+                <figure class="shot-frame">
+                    <img src="../assets/images/github-quick-setup.svg" alt="Màn hình GitHub Quick setup với URL repository" loading="lazy" />
+                    <figcaption>Copy URL repo từ Quick setup để dùng cho <code>git remote add origin</code>.</figcaption>
+                </figure>
+                <div class="terminal-shot">
+                    <code>git remote add origin &lt;repo-url&gt;</code>
+                    <code>git remote -v</code>
+                </div>
+            </article>
+
+            <article class="guide-card">
+                <h3>Bước 5 — Push lần đầu</h3>
+                <p>Đẩy code lên GitHub và thiết lập upstream để các lần sau đơn giản hơn.</p>
+                <div class="terminal-shot">
+                    <code>git push -u origin main</code>
+                </div>
+                <figure class="shot-frame">
+                    <img src="../assets/images/github-repo-files.svg" alt="Màn hình GitHub hiển thị repository files sau khi push" loading="lazy" />
+                    <figcaption>Trạng thái xác nhận sau push: đã thấy commit và danh sách file.</figcaption>
+                </figure>
+                <div class="ui-shot success">
+                    <div class="ui-head">GitHub · Repository files</div>
+                    <p>Nếu thấy danh sách file xuất hiện là hoàn tất 🎉</p>
+                </div>
+            </article>
+
+            <article class="guide-card tips">
+                <h3>Lỗi thường gặp và cách xử lý nhanh</h3>
+                <ul>
+                    <li><strong>remote origin already exists</strong>: chạy <code>git remote remove origin</code> rồi add lại.</li>
+                    <li><strong>src refspec main does not match any</strong>: chưa có commit đầu, quay lại bước 2.</li>
+                    <li><strong>permission denied (publickey)</strong>: cấu hình SSH key hoặc dùng HTTPS URL.</li>
+                </ul>
+                <a class="btn primary" href="../lessons/index.html">Hoàn tất Bài 0, sang lộ trình chính</a>
+            </article>
+        </section>
+    </main>
+</body>
+
+</html>

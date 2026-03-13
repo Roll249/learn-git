@@ -1,0 +1,36 @@
+{
+    "labs": [
+        {
+            "id": "LAB1",
+            "title": "Khởi tạo repo và commit chuẩn",
+            "context": "Bạn nhận một thư mục dự án mới chưa có lịch sử Git.",
+            "task": "Khởi tạo repo, stage toàn bộ, tạo commit đầu tiên với message chuẩn conventional.",
+            "expected": "git init\ngit add .\ngit commit -m \"feat: initial project structure\"",
+            "explain": "Khởi tạo lịch sử từ local, stage rõ ràng và commit message có ngữ nghĩa."
+        },
+        {
+            "id": "LAB2",
+            "title": "Feature branch theo GitHub Flow",
+            "context": "Main đang ổn định, bạn cần làm tính năng đăng nhập.",
+            "task": "Tạo feature branch, commit thay đổi, push branch lên origin.",
+            "expected": "git switch -c feat/auth-login\ngit add .\ngit commit -m \"feat: add login form\"\ngit push -u origin feat/auth-login",
+            "explain": "Mọi thay đổi tách riêng trên feature branch để mở PR dễ review."
+        },
+        {
+            "id": "LAB3",
+            "title": "Cập nhật branch trước khi mở PR",
+            "context": "Main đã có commit mới từ teammate.",
+            "task": "Đồng bộ branch hiện tại với main bằng rebase an toàn.",
+            "expected": "git fetch origin\ngit rebase origin/main\ngit push --force-with-lease",
+            "explain": "Rebase giúp lịch sử sạch; force-with-lease giảm rủi ro ghi đè ngoài ý muốn."
+        },
+        {
+            "id": "LAB4",
+            "title": "Khôi phục commit bị mất sau reset",
+            "context": "Bạn lỡ reset HEAD và không thấy commit vừa làm.",
+            "task": "Tìm commit qua reflog và quay lại commit đó.",
+            "expected": "git reflog\ngit reset --hard HEAD@{1}",
+            "explain": "Reflog lưu dấu lịch sử HEAD, cho phép phục hồi nhanh khi thao tác nhầm."
+        }
+    ]
+}

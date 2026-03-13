@@ -1,0 +1,96 @@
+{
+    "groups": [
+        {
+            "name": "Cơ bản bắt buộc",
+            "items": [
+                {
+                    "command": "git status",
+                    "when": "Kiểm tra trạng thái file trong working tree và staging.",
+                    "example": "git status",
+                    "mistake": "Không kiểm tra trước khi commit nên đẩy nhầm file."
+                },
+                {
+                    "command": "git add <file>",
+                    "when": "Đưa thay đổi vào staging area theo chủ đích.",
+                    "example": "git add src/app.js",
+                    "mistake": "Dùng git add . quá sớm làm commit bị lẫn thay đổi chưa sẵn sàng."
+                },
+                {
+                    "command": "git commit -m \"type: message\"",
+                    "when": "Tạo snapshot có ý nghĩa nghiệp vụ rõ ràng.",
+                    "example": "git commit -m \"fix: validate empty email\"",
+                    "mistake": "Message quá chung chung như 'update'."
+                }
+            ]
+        },
+        {
+            "name": "Branch & Merge",
+            "items": [
+                {
+                    "command": "git switch -c feat/login",
+                    "when": "Tạo nhánh mới cho một tính năng tách biệt.",
+                    "example": "git switch -c feat/auth-login",
+                    "mistake": "Code trực tiếp trên main gây khó review/rollback."
+                },
+                {
+                    "command": "git merge feat/login",
+                    "when": "Hợp nhất nhánh feature vào nhánh hiện tại.",
+                    "example": "git switch main && git merge feat/auth-login",
+                    "mistake": "Merge khi main chưa cập nhật mới nhất từ remote."
+                },
+                {
+                    "command": "git branch -d feat/login",
+                    "when": "Xóa nhánh local sau khi đã merge.",
+                    "example": "git branch -d feat/auth-login",
+                    "mistake": "Xóa nhánh trước khi merge hoặc push backup."
+                }
+            ]
+        },
+        {
+            "name": "Remote & GitHub",
+            "items": [
+                {
+                    "command": "git remote add origin <url>",
+                    "when": "Kết nối repo local với repo GitHub.",
+                    "example": "git remote add origin git@github.com:team/app.git",
+                    "mistake": "Gắn sai URL SSH/HTTPS nên push thất bại."
+                },
+                {
+                    "command": "git push -u origin main",
+                    "when": "Push lần đầu và thiết lập upstream.",
+                    "example": "git push -u origin main",
+                    "mistake": "Quên -u khiến các lần push/pull sau phải chỉ rõ remote branch."
+                },
+                {
+                    "command": "git pull --rebase",
+                    "when": "Cập nhật thay đổi mới nhất và giữ lịch sử gọn.",
+                    "example": "git pull --rebase origin main",
+                    "mistake": "Pull merge mặc định nhiều lần làm lịch sử có merge commit rác."
+                }
+            ]
+        },
+        {
+            "name": "Nâng cao chuyên nghiệp",
+            "items": [
+                {
+                    "command": "git rebase -i HEAD~3",
+                    "when": "Gộp/sửa commit gần đây trước khi mở PR.",
+                    "example": "git rebase -i HEAD~4",
+                    "mistake": "Rebase commit đã push shared branch mà không phối hợp team."
+                },
+                {
+                    "command": "git cherry-pick <sha>",
+                    "when": "Lấy chọn lọc một commit sang nhánh khác.",
+                    "example": "git cherry-pick a1b2c3d",
+                    "mistake": "Cherry-pick nhiều commit phụ thuộc gây conflict dây chuyền."
+                },
+                {
+                    "command": "git reflog",
+                    "when": "Tìm lại commit khi lỡ reset/rebase sai.",
+                    "example": "git reflog",
+                    "mistake": "Không biết reflog nên tưởng mất code vĩnh viễn."
+                }
+            ]
+        }
+    ]
+}

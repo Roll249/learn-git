@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Git & GitHub Learning Path</title>
+    <link rel="stylesheet" href="assets/styles.css" />
+</head>
+
+<body data-page="home">
+    <header class="topbar">
+        <a class="brand" href="index.html">Git Pro Path</a>
+        <nav>
+            <a href="starter/index.html">Bắt đầu</a>
+            <a href="lessons/index.html">Lộ trình</a>
+            <a href="commands/index.html">Câu lệnh</a>
+            <a href="labs/index.html">Lab</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="hero">
+            <h1>Học Git & GitHub từ Zero đến Professional</h1>
+            <p>
+                Lộ trình dành cho người mới hoàn toàn, bám theo GitHub Flow với bài học ngắn,
+                ví dụ lệnh rõ ràng và lab mô phỏng thực chiến.
+            </p>
+            <div class="hero-actions">
+                <a class="btn primary" href="starter/index.html">Bắt đầu đúng cách (Bài 0)</a>
+                <a class="btn" href="lessons/index.html">Vào lộ trình</a>
+                <a class="btn" href="commands/index.html">Xem câu lệnh</a>
+            </div>
+        </section>
+
+        <section class="grid three" id="home-metrics"></section>
+
+        <section class="starter-box">
+            <h2>Bắt đầu đúng thứ tự (Local -> GitHub)</h2>
+            <ol>
+                <li>Mở terminal tại folder dự án local.</li>
+                <li>Chạy <code>git init</code> -> <code>git add .</code> -> <code>git commit -m "chore: initial commit"</code>.</li>
+                <li>Trên GitHub tạo repo mới (không tạo sẵn README/.gitignore).</li>
+                <li>Chạy <code>git branch -M main</code> -> <code>git remote add origin &lt;repo-url&gt;</code>.</li>
+                <li>Chạy <code>git push -u origin main</code> và kiểm tra code đã lên repo.</li>
+            </ol>
+            <a class="btn" href="starter/index.html">Xem hướng dẫn từng click GitHub UI</a>
+        </section>
+
+        <section>
+            <h2>Lộ trình học</h2>
+            <div id="path-cards" class="grid two"></div>
+        </section>
+
+        <section>
+            <h2>Tiến độ của bạn</h2>
+            <div class="progress-wrap">
+                <div class="progress-bar"><span id="overall-progress"></span></div>
+                <p id="overall-progress-text">0% hoàn thành</p>
+            </div>
+        </section>
+    </main>
+
+    <script src="assets/app.js"></script>
+</body>
+
+</html>
