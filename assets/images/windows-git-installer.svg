@@ -1,0 +1,22 @@
+<svg width="1280" height="720" viewBox="0 0 1280 720" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1280" height="720" fill="#0F172A"/>
+  <rect x="70" y="42" width="1140" height="636" rx="14" fill="#111827" stroke="#334155"/>
+  <rect x="70" y="42" width="1140" height="54" rx="14" fill="#1F2937"/>
+  <text x="98" y="76" fill="#E5E7EB" font-size="20" font-family="Inter, Arial">Git Setup Wizard</text>
+
+  <text x="110" y="142" fill="#E5E7EB" font-size="30" font-family="Inter, Arial" font-weight="700">Installing Git for Windows</text>
+  <text x="110" y="178" fill="#94A3B8" font-size="16" font-family="Inter, Arial">Chọn các bước Recommended (mặc định), sau đó bấm Next liên tục.</text>
+
+  <rect x="110" y="220" width="1060" height="300" rx="12" fill="#0B1220" stroke="#334155"/>
+  <text x="140" y="268" fill="#E2E8F0" font-size="16" font-family="Inter, Arial">✔ Select Components: giữ mặc định</text>
+  <text x="140" y="308" fill="#E2E8F0" font-size="16" font-family="Inter, Arial">✔ Default editor: Visual Studio Code (hoặc editor bạn dùng)</text>
+  <text x="140" y="348" fill="#E2E8F0" font-size="16" font-family="Inter, Arial">✔ Adjust PATH: Git from command line and also from 3rd-party software</text>
+  <text x="140" y="388" fill="#E2E8F0" font-size="16" font-family="Inter, Arial">✔ HTTPS transport backend: Use OpenSSL library</text>
+  <text x="140" y="428" fill="#E2E8F0" font-size="16" font-family="Inter, Arial">✔ Line ending conversions: Checkout Windows-style, commit Unix-style</text>
+  <text x="140" y="468" fill="#E2E8F0" font-size="16" font-family="Inter, Arial">✔ Terminal emulator: Use MinTTY</text>
+
+  <rect x="946" y="602" width="108" height="42" rx="8" fill="#16A34A"/>
+  <text x="982" y="629" fill="#FFFFFF" font-size="16" font-family="Inter, Arial" font-weight="700">Next</text>
+  <rect x="1066" y="602" width="108" height="42" rx="8" fill="#2563EB"/>
+  <text x="1094" y="629" fill="#FFFFFF" font-size="16" font-family="Inter, Arial" font-weight="700">Install</text>
+</svg>

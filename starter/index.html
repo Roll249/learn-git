@@ -27,6 +27,64 @@
             </p>
         </section>
 
+        <section class="install-box">
+            <h2>0. Cài Git trước khi bắt đầu</h2>
+            <p>Nếu máy bạn chưa có Git, cài theo hệ điều hành bên dưới rồi kiểm tra lại bằng <code>git --version</code>.</p>
+            <div class="install-grid">
+                <article class="install-card">
+                    <h3>Windows</h3>
+                    <ol>
+                        <li>Tải Git tại: <a href="https://git-scm.com/download/win" target="_blank" rel="noopener noreferrer">git-scm.com/download/win</a></li>
+                        <li>Mở file cài đặt và để mặc định các bước Recommended.</li>
+                        <li>Mở <strong>Git Bash</strong> hoặc PowerShell, chạy:</li>
+                    </ol>
+                    <code class="block">git --version</code>
+                </article>
+
+                <article class="install-card">
+                    <h3>macOS</h3>
+                    <ol>
+                        <li>Cách nhanh: mở Terminal và chạy:</li>
+                    </ol>
+                    <code class="block">git --version</code>
+                    <ol start="2">
+                        <li>Nếu máy chưa có Git, macOS sẽ gợi ý cài Xcode Command Line Tools, chọn Install.</li>
+                        <li>Hoặc cài bằng Homebrew:</li>
+                    </ol>
+                    <code class="block">brew install git</code>
+                </article>
+
+                <article class="install-card">
+                    <h3>Linux</h3>
+                    <p>Chọn lệnh theo distro:</p>
+                    <code class="block">sudo apt update && sudo apt install -y git</code>
+                    <code class="block">sudo dnf install -y git</code>
+                    <code class="block">sudo pacman -S git</code>
+                    <p class="small">Kiểm tra sau cài đặt: <code>git --version</code></p>
+                </article>
+            </div>
+
+            <section class="windows-walkthrough">
+                <h3>Windows chi tiết (từng click)</h3>
+                <ol>
+                    <li>Tải bộ cài Git tại <a href="https://git-scm.com/download/win" target="_blank" rel="noopener noreferrer">git-scm.com/download/win</a>.</li>
+                    <li>Mở installer và giữ các lựa chọn Recommended (mặc định), bấm <strong>Next</strong> liên tục.</li>
+                    <li>Đến bước PATH, chọn tùy chọn cho phép dùng Git từ command line.</li>
+                    <li>Hoàn tất cài đặt, mở <strong>Git Bash</strong> và chạy <code>git --version</code>.</li>
+                </ol>
+
+                <figure class="shot-frame">
+                    <img src="../assets/images/windows-git-installer.svg" alt="Màn hình Git Setup Wizard với tùy chọn recommended" loading="lazy" />
+                    <figcaption>Git Setup Wizard: để mặc định theo Recommended cho người mới.</figcaption>
+                </figure>
+
+                <figure class="shot-frame">
+                    <img src="../assets/images/windows-git-verify.svg" alt="Git Bash kiểm tra git --version sau cài đặt" loading="lazy" />
+                    <figcaption>Kiểm tra thành công bằng <code>git --version</code> trong Git Bash.</figcaption>
+                </figure>
+            </section>
+        </section>
+
         <section class="guide-grid">
             <article class="guide-card">
                 <h3>Bước 1 — Mở đúng folder local</h3>

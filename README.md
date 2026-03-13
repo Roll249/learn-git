@@ -28,6 +28,15 @@ Mở trình duyệt tại:
 
 Mục tiêu: từ folder trên máy, tạo repo mới trên GitHub và kết nối/push thành công.
 
+### Cài Git theo hệ điều hành
+
+- Windows: tải tại `https://git-scm.com/download/win`, cài đặt mặc định, rồi kiểm tra `git --version`.
+- macOS: chạy `git --version` để kích hoạt cài Xcode Command Line Tools, hoặc `brew install git`.
+- Linux:
+	- Ubuntu/Debian: `sudo apt update && sudo apt install -y git`
+	- Fedora/RHEL: `sudo dnf install -y git`
+	- Arch: `sudo pacman -S git`
+
 1. Mở terminal tại folder dự án local.
 2. Chạy:
 
